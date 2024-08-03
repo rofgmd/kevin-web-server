@@ -29,7 +29,6 @@ jobs:
 
     - name: Prepare build directory
       run: |
-        rm -rf build
         mkdir build
         mkdir libs
         git clone https://github.com/yhirose/cpp-httplib.git libs/
