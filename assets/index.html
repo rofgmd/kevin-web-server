@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>翁凯航的简历</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <h1>翁凯航</h1>
+        <h1>翁凯航的简历</h1>
         <p>联系方式: 13570717891 | wengkai_hang@foxmail.com | 广州</p>
     </header>
     <section>
@@ -17,27 +19,126 @@
         <p>华南理工大学 机械电子工程 本科 2018年9月至2022年7月</p>
     </section>
     <section>
+        <h2>简历更新提示</h2>
+        <p>本网站是为了C++ web-server项目写的，简历内容的更新可能不是很及时，最新的简历可以在<a
+                href="https://drive.google.com/file/d/1_zQTZ5-JUxPreCNfQ5D_MXHILusgvjct/view?usp=drive_link"
+                target="_blank">这里</a>查看和下载。</p>
+    </section>
+    <section>
         <h2>专业技能</h2>
         <ul>
-            <li>精通C++、Python编程语言，熟悉STL、CMake、shell脚本、PromQL</li>
+            <li>擅长C++、Python编程语言，熟悉STL下常见容器底层数据结构，了解CMake、shell脚本、PromQL等</li>
             <li>熟悉常见数据结构及算法</li>
             <li>掌握HTTP、HTTPS、TCP/UDP、IP等常见协议</li>
             <li>熟悉Linux环境下常用命令，能基于Docker和k8s配置环境并上线</li>
             <li>有接入大语言模型的经验，并能熟练编写prompt</li>
+            <li>了解常见的中间件如Redis，ES，Kafka等</li>
+            <li>了解基于Prometheus及Grafana为基础的监控平台</li>
         </ul>
     </section>
     <section>
         <h2>实习经历</h2>
         <p>深圳虾皮Shopee信息科技有限公司 SRE（运维）工程师 2024年6月至今</p>
-        <p>设计和实现报警辅助定位诊断软件，快速定位报警，减少SRE人工排查时间，提高团队响应效率。</p>
+        <li>任务背景：常见报警信息需要SRE人工进行排查浪费团队人力。</li>
+        <li>任务定义： 设计和实现报警辅助定位诊断软件。目标：快速定位报警，结合日志信息和脚本，减少SRE人工排
+            查时间，并提高团队响应效率。
+        </li>
+        <li>工作内容： 
+            <ol>
+                <li>
+                    <strong>编写PromQL配置告警规则并配置告警触发的Webhook：</strong>
+                    定义告警触发条件，为Prometheus编写PromQL查询语句，报警涵盖了主机资源使用情况和应用服务的运行状态。使用Webhook在告警触发时发送报警信息。
+                </li>
+                <li>
+                    <strong>实现基于Flask架构的诊断服务：</strong>
+                    转发并处理特定类型的告警，例如主机问题、pod重启、pod数量变化或NGINX错误码。
+                </li>
+                <li>
+                    <strong>编写具体的诊断处理函数：</strong>
+                    执行必要的诊断步骤，如日志分析、发送脚本等定位报警发生原因，生成诊断报告。
+                </li>
+                <li>
+                    <strong>发送诊断结果：</strong>
+                    将诊断结果发送到指定的报警通知群进行通知。
+                </li>
+                <li>
+                    <strong>项目上线。</strong>
+                </li>
+            </ol>
+        </li>
+        <li>工作结果： 成功实现了对主机类问题（CPU、内存、磁盘）、NGINX错误码（4xx, 5xx）和Kubernetes的
+            pod重启问题的辅助诊断软件，并成功上线。
+        </li>
     </section>
     <section>
         <h2>项目经历</h2>
-        <p>研究生课题：图像分割大模型的算法研究及应用，提高图像实例分割的精度和速度。</p>
-        <p>本科毕业设计：参与基于BIT*的机械臂运动规划算法的优化，实现机械臂的避障规划和路径最优。</p>
+        <h3>研究生课题：图像分割大模型的算法研究及应用</h3>
+        <li>研究方向：图像分割大模型的算法研究及应用，旨在提高图像实例分割的精度和速度。</li>
+        <li>任务：负责对SAM算法进行改进，提高算法精度及优化图像分割时间，并在生产机器人上部署。</li>
+        <li>
+            <strong>方法：</strong>
+            <ol>
+                <li>
+                    采用K-medoids聚类算法和增添HQ token对SAM进行改进，命名为HQSAM-medoids。
+                </li>
+                <li>
+                    利用线程分离的思想，将HQSAM-medoids图像处理流程分成两个模块：提示生成模块和图像分割模块。
+                    <ul>
+                        <li>提示生成模块作为生产者。</li>
+                        <li>图像分割模块作为消费者。</li>
+                        <li>生产者和消费者之间通过队列进行提示的交换。</li>
+                    </ul>
+                </li>
+                <li>
+                    使用Python作为开发语言，并利用shell脚本管理多任务执行。
+                </li>
+            </ol>
+        </li>
+        <li>结果：相比原始的SAM算法，HQSAM-medoids算法在图像实例分割任务上的精度AP提高了3.4个百分点，
+            速度提升了25%。将模型导出为onnx并部署在奶牛推料机器人上，使用boost::asio库对底盘进行串口通信控
+            制底盘。</li>
+        <h3>本科毕业设计：机械臂运动规划算法优化及应用</h3>
+        <li>研究方向：参与基于BIT*的机械臂运动规划算法的优化，实现机械臂的避障规划和路径最优。</li>
+        <li>
+            <strong>任务：</strong>负责对BIT*算法进行改进，提高路径规划质量，并部署在实际机器人上。
+            <ul>
+                <li>
+                    <strong>方法：</strong>
+                    <ol>
+                        <li>
+                            使用高斯分布对BIT*算法进行改进，命名为BIT*-Gaussian。
+                        </li>
+                        <li>
+                            将BIT*-Gaussian嵌入至开源运动规划库OMPL中，利用CMake管理编译项目。
+                        </li>
+                        <li>
+                            通过ROS系统中的Moveit使用BIT*-Gaussian对真实的UR5机器人进行避障规划。
+                        </li>
+                        <li>
+                            使用C++作为开发语言，CMake进行项目编译。
+                        </li>
+                    </ol>
+                </li>
+            </ul>
+        </li>
+        <li>结果：相比原始的BIT*算法，BIT*-Gaussian算法在同等时间下规划的路径缩短了3%，实现了机械臂的避障规
+            划和路径最优。</li>
     </section>
-    <footer>
-        <p>荣誉奖项：多次获得学术奖学金和表彰。</p>
-    </footer>
+    <section>
+        <h2>证书及其他</h2>
+        <li>获奖： 校级三等奖学金（2018）三好学生（2018）校级三等奖学金（2020）三好学生（2020）</li>
+        <li>语言： 英语（CET-6）506</li>
+    </section>
+    <section>
+        <h2>个人总结</h2>
+        <li>本人在校期间，成绩优异，并成功保研本校。</li>
+        <li>本人具有跨领域的背景，在产品的算法，后端，运维，硬件电路，机械设计等技术上实现闭环。</li>
+        <li>本人拥有一段SRE运维岗位的实际经验，了解告警平台，熟悉报警处理流程。</li>
+        <li>本人热爱计算机技术，积极follow新技术，并有每日复盘的习惯。</li>
+        <li>本人喜欢与他人沟通，善于与同事，同学、导师等进行有效的交流和合作，能够听取不同的意见和建议，也能
+            够表达自己的想法和观点。</li>
+        <li>本人乐观向上，是一个超级的乐观主义者，每天都是全新的一天。</li>
+    </section>
 </body>
+
 </html>
