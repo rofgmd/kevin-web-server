@@ -12,6 +12,7 @@ include_directories(libs/cpp-httplib)
 
 # 可以添加用于查找和链接的库路径
 link_directories(libs)
+include_directories("${PROJECT_SOURCE_DIR}/libs/cpp-httplib")
 
 # 添加执行文件
 add_executable(my_blog_server src/main.cpp src/Server.cpp src/Handler.cpp)
