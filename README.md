@@ -40,7 +40,8 @@ Make sure you have the following installed:
 4. Start the server:
 
     ```bash
-    ./blog_server
+    cd ../
+    ./build/my_blog_server
     ```
 
 
