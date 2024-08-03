@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/kevin/kevin-web-server/libs/cpp-httplib/httplib.h
+../libs/cpp-httplib/httplib.h
 io.h
 -
 winsock2.h
@@ -135,6 +135,6 @@ brotli/encode.h
 /home/kevin/kevin-web-server/src/main.cpp
 iostream
 -
-../libs/cpp-httplib/httplib.h
-/home/kevin/kevin-web-server/libs/cpp-httplib/httplib.h
+httplib.h
+/home/kevin/kevin-web-server/src/httplib.h
 
