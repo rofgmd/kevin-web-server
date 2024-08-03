@@ -1,17 +1,18 @@
-# C++ Blog System
+# C++ CV System
 
-This is a simple C++ blog system with a custom web server. It uses MySQL for data storage and is built using CMake.
+This is a simple C++ cv system with a custom web server. It uses MySQL for data storage and is built using CMake.
 
 ## Features
 
 - Lightweight web server
-- CRUD operations for blog posts
+- CRUD operations for cv posts
 - User authentication
 - Responsive design
 
 ## Prerequisites
 
 Make sure you have the following installed:
+
 - CMake (version 3.10 or higher)
 - MySQL
 - Docker (optional, for containerization)
@@ -20,29 +21,26 @@ Make sure you have the following installed:
 
 1. Clone the repository:
 
-    ```bash
-    git clone https://github.com/rofgmd/kevin-web-server.git
-    ```
-
+   ```bash
+   git clone https://github.com/rofgmd/kevin-web-server.git
+   ```
 2. Create a build directory:
 
-    ```bash
-    mkdir build && cd build
-    ```
-
+   ```bash
+   mkdir build && cd build
+   ```
 3. Run CMake and build the project:
 
-    ```bash
-    cmake ..
-    make
-    ```
-
+   ```bash
+   cmake ..
+   make
+   ```
 4. Start the server:
 
-    ```bash
-    ./blog_server
-    ```
-
+   ```bash
+   cd ..
+   ./blog_server
+   ```
 
 ## Configuration
 
