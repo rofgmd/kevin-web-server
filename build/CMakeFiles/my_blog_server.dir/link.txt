@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/my_blog_server.dir/src/main.cpp.o CMakeFiles/my_blog_server.dir/src/Server.cpp.o CMakeFiles/my_blog_server.dir/src/Handler.cpp.o  -o my_blog_server   -L/home/kevin/kevin-web-server/libs  -Wl,-rpath,/home/kevin/kevin-web-server/libs -lpthread -lmysqlclient 
