@@ -31,7 +31,10 @@ jobs:
       run: |
         mkdir build
         mkdir libs
-        git clone https://github.com/yhirose/cpp-httplib.git libs/
+
+    - name: Clone cpp-httplib
+      run: |
+        git clone https://github.com/yhirose/cpp-httplib.git libs/cpp-httplib
     
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
