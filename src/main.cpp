@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../libs/cpp-httplib/httplib.h"
+#include "httplib.h"
 using namespace std;
 
 int main(){

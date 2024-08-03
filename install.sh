@@ -8,4 +8,3 @@ cmake --version
 sudo apt-get install libmysqlclient-dev
 mysql --version
 sudo service mysql start
-

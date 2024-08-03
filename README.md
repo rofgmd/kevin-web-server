@@ -37,10 +37,18 @@ Make sure you have the following installed:
    ```
 4. Start the server:
 
+<<<<<<< HEAD
    ```bash
    cd ..
    ./blog_server
    ```
+=======
+    ```bash
+    cd ../
+    ./build/my_blog_server
+    ```
+
+>>>>>>> cc976a05fabfe324a28cdae238bc3a978265d8fc
 
 ## Configuration
 
