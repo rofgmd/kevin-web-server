@@ -4,6 +4,8 @@
 
 This is a simple C++ cv system with a custom web server. It uses MySQL for data storage and is built using CMake.
 
+**cpp选手人均一个的项目，看得我好焦虑。实习好忙，工作日晚上还得背八股文，周末才有时间进行开发，望见谅**
+
 ## Features
 
 - Lightweight web server
